@@ -1,0 +1,108 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #fff0f5, #ffe4e1);
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+    animation: fadeBg 3s ease-in-out;
+}
+
+@keyframes fadeBg {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+h1 {
+    color: #b30059;
+    font-size: 3rem;
+    font-family: 'Great Vibes', cursive;
+    text-shadow: 0 0 10px #ff99cc;
+    animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 5px #ff66cc;
+    }
+
+    to {
+        text-shadow: 0 0 15px #ff66cc;
+    }
+}
+
+.btn {
+    background-color: #ff66a3;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+    box-shadow: 0 4px 12px rgba(255, 105, 180, 0.4);
+}
+
+.btn:hover {
+    background-color: #e60073;
+    transform: scale(1.1);
+}
+
+.message-box {
+    display: none;
+    margin-top: 40px;
+    padding: 25px;
+    font-size: 1.3rem;
+    color: #800040;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(255, 182, 193, 0.6);
+    max-width: 85%;
+    text-align: center;
+    animation: fadeIn 1.5s ease forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.heart {
+    position: absolute;
+    animation: float 6s infinite ease-in;
+    pointer-events: none;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+audio {
+    display: none;
+}
